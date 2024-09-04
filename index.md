@@ -1,5 +1,5 @@
 ---
-layout: col-sidebar
+layout: default
 displaytext: OWASP Quebec City
 title: OWASP Quebec City
 tags: OWASPQC
@@ -15,6 +15,23 @@ meetup-group: quebec-owasp-meetup-group
 <!--
   Ceci est un commentaire
 -->
+# Bienvenue sur OWASP Quebec City
+
+## Prochains événements
+
+{% for event in site.events limit:3 %}
+  <h3><a href="{{ event.url }}">{{ event.title }}</a></h3>
+  <p>Date: {{ event.date | date: "%d/%m/%Y" }}</p>
+{% endfor %}
+
+## Dernières annonces
+
+{% for announcement in site.announcements limit:5 %}
+  <h3><a href="{{ announcement.url }}">{{ announcement.title }}</a></h3>
+  <p>{{ announcement.excerpt }}</p>
+{% endfor %}
+
+
 # Événement à venir
 
 ### OWASP Montréal et OWASP Ville de Québec sont fiers de participer à GoSec 2024 – Bénéficiez de notre code promo!
