@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | OWASP Quebec City</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li>
+                    <a href="#" class="dropdown-toggle">Événements</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/evenements/a-venir">À venir</a></li>
+                        <li><a href="/evenements/passes">Passés</a></li>
+                    </ul>
+                </li>
+                <li><a href="/annonces">Annonces</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} OWASP Quebec City. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
