@@ -1,6 +1,6 @@
 ---
 title: 2023/11/15 - OWASP Top 10 CI/CD Security Risks
-layout: col-sidebar
+layout: event
 tags: OWASPQC
 ---
 ## 15 Novembre 2023: Conference: OWASP Top 10 CI/CD Security Risks
