@@ -1,3 +1,29 @@
 remote_theme: "owasp/www--site-theme@main"
 plugins:
  - jekyll-include-cache-0.2.0
+ - jekyll-seo-tag
+ - jekyll-sitemap
+ # _config.yml
+title: OWASP Quebec City
+description: Chapitre OWASP de la ville de Québec
+url: "https://owasp.org/www-chapter-quebec-city"
+
+collections:
+  events:
+    output: true
+    permalink: /evenements/:path/
+  announcements:
+    output: true
+    permalink: /annonces/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
+  - scope:
+      path: ""
+      type: "announcements"
+    values:
+      layout: "announcement"
